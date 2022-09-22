@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set06 OJA - Login</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="../Images/codelab-removebg-preview.png" alt="">
+            </div>
+            <div class="oja">
+                <h2>SET 06 <span>OJA</span></h2>
+            </div>
+        </div>
+        <div class="body">
+            <div class="form-box">
+                <h1><span>L</span>og <span>I</span>n <span>T</span>o <span>Y</span>our <span>A</span>ccount</h1>
+
+                
+                    <div class="email">
+                        <!-- <i class="fa-light fa-envelope"></i> -->
+                         <input type="name" name="Name" placeholder="USERNAME" id="name">
+                     </div>
+                     <div class="password">
+                        <!-- <i class="fa-user" aria-hidden="true"></i> -->
+                        <input type="password" name="Name" placeholder="Password" id="password">
+                    </div>
+                    <!-- <a href="../HTML/index.html"><div class="registerBtn">Login</div></a> -->
+                    <button id="btn" onclick="validation()">click me</button>
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    function validation() {
+             var name="gogether"
+             var password="1234"
+             var naMe=document.getElementById("name").value;
+             var passWord=document.getElementById("password").value;
+             
+         if((name == naMe) && (passWord == password)){
+            swal({
+         title: "welcomeBack",
+         text: "CodeLab set06",
+         type: "success"
+        },
+            function() {
+                window.location = "./home.html"; //หน้าที่ต้องการให้กระโดดไป
+            
+            }
+        );
+        }else{
+            swal({
+         title: "wrong input",
+         text: "devbanban.com",
+         type: "error"})
+        }
+    //  swal({
+    //      title: "Hello",
+    //      text: "devbanban.com",
+    //      type: "success"
+    //  }, function() {
+    //      window.location = "./home.html"; //หน้าที่ต้องการให้กระโดดไป
+         
+    //  });
+ }
+</script>
+</html>
+<!-- คู่มือ https://sweetalert.js.org/docs/ -->
+<!-- ตย. code จาก  https://stackoverflow.com/questions/37358423/how-to-redirect-page-after-click-on-ok-button-on-sweet-alert -->
+</html>
